@@ -1,0 +1,82 @@
+[
+  {
+    "name": "case1ac9f2",
+    "data": [
+      {
+        "query": "Hi",
+        "expected_tool_use": [],
+        "expected_intermediate_agent_responses": [],
+        "reference": "Hi there! How can I help you today?\n"
+      },
+      {
+        "query": "How are you",
+        "expected_tool_use": [],
+        "expected_intermediate_agent_responses": [],
+        "reference": "I'm doing well, thank you for asking! How can I help you with time or weather information today?\n"
+      },
+      {
+        "query": "Get current time of Ho Chi Minh City",
+        "expected_tool_use": [
+          {
+            "tool_name": "get_current_time",
+            "tool_input": {
+              "city": "Ho Chi Minh City"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [],
+        "reference": "I am sorry, I don't have timezone information for Ho Chi Minh City. I cannot fulfill this request."
+      },
+      {
+        "query": "get current time of Hanoi",
+        "expected_tool_use": [
+          {
+            "tool_name": "get_current_time",
+            "tool_input": {
+              "city": "Hanoi"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [],
+        "reference": "I am sorry, I don't have timezone information for Hanoi. I cannot fulfill this request."
+      },
+      {
+        "query": "get current time of Berlin",
+        "expected_tool_use": [
+          {
+            "tool_name": "get_current_time",
+            "tool_input": {
+              "city": "Berlin"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [],
+        "reference": "I am sorry, I don't have timezone information for Berlin. I cannot fulfill this request."
+      },
+      {
+        "query": "new york",
+        "expected_tool_use": [],
+        "expected_intermediate_agent_responses": [],
+        "reference": "Do you want to know the current time or the weather in New York?\n"
+      },
+      {
+        "query": "current time",
+        "expected_tool_use": [
+          {
+            "tool_name": "get_current_time",
+            "tool_input": {
+              "city": "New York"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [],
+        "reference": "The current time in New York is 2025-04-15 04:43:52 EDT-0400.\n"
+      }
+    ],
+    "initial_session": {
+      "state": {},
+      "app_name": "multi_tool_agent",
+      "user_id": "user"
+    }
+  }
+]
